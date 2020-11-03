@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   root to: redirect('/blogs')
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  if defined?(Sidekiq) && defined?(Sidekiq::Cron)
-    require 'sidekiq/web'
-    require 'sidekiq/cron/web'
+  if defined?(Sidekiq)
     mount Sidekiq::Web => '/sidekiq'
   end
 end
