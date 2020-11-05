@@ -1,7 +1,6 @@
 ---
 # Add any task you'd like to run a specific times.
-#
-# Daily Usage Summary:
-#   :cron: 0 6 * * *
-#   :class: Slack::UsageSummaryJob
-#   :queue: slack__usage_summary
+Create Random Blog:
+  :cron: 59 11 * * *
+  :class: Blog::CreateRandomJob
+  :queue: default
