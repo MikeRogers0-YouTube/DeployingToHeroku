@@ -16,7 +16,7 @@ jobs:
         run: |
           docker pull ruby:2.7.1-alpine
           docker-compose -f docker-compose.ci.yml pull
-      - uses: satackey/action-docker-layer-caching@v0.0.8
+      - uses: satackey/action-docker-layer-caching@v0.0.11
       - name: Build Latest
         run: |
           docker-compose -f docker-compose.ci.yml build test
